@@ -1,21 +1,27 @@
 from setuptools import setup, find_packages
 import os
 
-version = '1.0b2'
+version = '0.1'
 
 setup(name='pcommerce.shipment.digital',
       version=version,
       description="Provides a pick up shipment plugin for PCommerce",
-      long_description=open("README.txt").read() + "\n" +
-                       open(os.path.join("docs", "HISTORY.txt")).read(),
+      long_description = (
+            open('README.txt').read()
+            + '\n\n' +
+            'History\n'
+            '=======\n'
+            + '\n\n' +
+            open('CHANGES.txt').read()
+            + '\n'),
       # Get more strings from http://www.python.org/pypi?%3Aaction=list_classifiers
       classifiers=[
         "Programming Language :: Python",
         "Topic :: Software Development :: Libraries :: Python Modules",
         ],
       keywords='',
-      author='Raptus AG',
-      author_email='dev@raptus.com',
+      author='Steffen Lindner',
+      author_email='gomez@flexiabel.de',
       url='https://svn.plone.org/svn/collective/pcommerce.shipment.digital',
       license='GPL',
       packages=find_packages(exclude=['ez_setup']),
